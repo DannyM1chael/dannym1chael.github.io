@@ -3,10 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 import * as URL from './url';
 import Home from '../components/screens/home';
 
-const About = lazy(() => import('../components/screens/about'));
-const Resume = lazy(() => import('../components/screens/resume'));
-const Portfolio = lazy(() => import('../components/screens/portfolio'));
-const Contact = lazy(() => import('../components/screens/contact'));
+const About = lazy(() => import('../components/screens/sections/about'));
+const Resume = lazy(() => import('../components/screens/sections/resume'));
+const Portfolio = lazy(() => import('../components/screens/sections/portfolio'));
+const Contact = lazy(() => import('../components/screens/sections/contact'));
 
 export default (
     <Switch>
