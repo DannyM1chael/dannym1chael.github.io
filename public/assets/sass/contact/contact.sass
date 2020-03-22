@@ -26,8 +26,21 @@
             margin-bottom: 20px
             font-size: 14px
             color: #173b6c
-        .email p
+        .email
+            &:hover
+                i
+                    background: #149ddd
+                    color: #fff
+            p
             padding-top: 5px
+        .address:hover
+            i                    
+                background: #149ddd
+                color: #fff
+        .phone:hover
+            i
+                background: #149ddd
+                color: #fff                
         .social-links
             padding-left: 60px
             a
@@ -45,3 +58,43 @@
                 &:hover
                     background: #149ddd
                     color: #fff
+    .php-email-form
+        width: 100%
+        padding: 30px
+        background: #fff
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12)
+        input
+            border-radius: 0
+            box-shadow: none
+            font-size: 14px
+            height: 44px
+        textarea
+            border-radius: 0
+            box-shadow: none
+            font-size: 14px
+            padding: 10px 12px              
+        .form-group
+            padding-bottom: 8px
+        .validate
+            display: none
+            color: red
+            margin: 0 0 15px 0
+            font-weight: 400
+            font-size: 13px
+        .error-message
+            display: none
+            color: #fff
+            background: #ed3c0d
+            text-align: center
+            padding: 15px
+            font-weight: 600
+        button
+            background: #149ddd
+            border: 0
+            padding: 10px 24px
+            color: #fff
+            border-radius: 4px
+            cursor: pointer
+            &:hover
+                background: #37b3ed
+                

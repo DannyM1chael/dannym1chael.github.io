@@ -7,7 +7,7 @@ function Profile(props) {
     const ProfileImg = process.env.PUBLIC_URL + '/assets/img/profile.jpg';
     return(
         <div className="profile">
-                <img src={ ProfileImg } alt="" className="img-fluid rounded-circle"/>
+            <img src={ ProfileImg } alt=""/>
             <h1 className="text-light"><Link to= { URL.HOME }>Denis Mikhalev</Link></h1>
             <div className="social-links mt-3 text-center">
                 <Link to="#" className="github"><i className="bx bxl-github"></i></Link>
