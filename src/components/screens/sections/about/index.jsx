@@ -26,7 +26,7 @@ function About(props) {
                             <div className="row">
                                 <div className="col-lg-6">
                                     <ul>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Birthday:</strong> 9 August 1987</li>
+                                        <li><i className="icofont-rounded-right"></i> <strong>Birthday:</strong> 09 August 1987</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>Phone:</strong> +7 985 190 90 35</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>City:</strong> Moscow, Russia</li>

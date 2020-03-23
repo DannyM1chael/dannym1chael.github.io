@@ -4,7 +4,7 @@ import Resume from '../sections/resume';
 import Portfolio from '../sections/portfolio';
 import Contact from '../sections/contact';
 
-function Sections(props) {
+export default function Sections(props) {
     
     return(
         <main id="main">
@@ -15,5 +15,3 @@ function Sections(props) {
         </main>
     )
 }
-
-export default Sections;

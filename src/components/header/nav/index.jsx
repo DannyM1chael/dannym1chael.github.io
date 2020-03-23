@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavSections from './nav_sections';
+import NavSections from './nav';
 // import { animateScroll as scroll } from 'react-scroll';
 
 function Navigation(props) {
