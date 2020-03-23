@@ -6,7 +6,7 @@ Open for proposals)
 
 Skills:
 
-HTML • CSS • JQuery • React.js • Sass • Redux • Веб-разработка • JavaScript • Vanilla.js • PHP
+HTML • CSS • JQuery • React.js • Sass • Redux • JavaScript • Vanilla.js • PHP
 
 Projects:
 
