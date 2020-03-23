@@ -12,7 +12,10 @@ function About(props) {
                 <div className="container">
                     <div className="section-title">
                         <h2>About</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        <p> 
+                            I'm a Web developer with a passion for building meaningful products. 
+                            I believe IT is the future, but technologies won't replace people at the end, they have to go forward together side by side.
+                        </p>
                     </div>
                     <div className="row">
                         <div className="col-lg-4">
@@ -20,10 +23,6 @@ function About(props) {
                         </div>
                         <div className="col-lg-8 pt-4 pt-lg-0 content">
                             <h3>Web Developer</h3>
-                            <p className="font-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
                             <div className="row">
                                 <div className="col-lg-6">
                                     <ul>

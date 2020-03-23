@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as URL from '../../../router/url';
+import socialLinks from './social_links';
 
-function Profile(props) {
+export default function Profile(props) {
 
     const ProfileImg = process.env.PUBLIC_URL + '/assets/img/profile.jpg';
+
+    const renderLinks = (item) =>{
+        return (
+            <Link to="#"  key={ item } className={`${ item }`}><i className={`bx bxl-${item}`}></i></Link>
+        )
+    };
+
     return(
         <div className="profile">
             <img src={ ProfileImg } alt=""/>
-            <h1 className="text-light"><Link to= { URL.HOME }>Denis Mikhalev</Link></h1>
+            <h1 className="text-light"><Link to= '/'>Denis Mikhalev</Link></h1>
             <div className="social-links mt-3 text-center">
-                <Link to="#" className="github"><i className="bx bxl-github"></i></Link>
-                <Link to="#" className="skype"><i className="bx bxl-skype"></i></Link>
-                <Link to="#" className="linkedin"><i className="bx bxl-linkedin"></i></Link>
+                { socialLinks.map(renderLinks) }
             </div>
         </div>
     )
-}
-
-export default Profile;
+};

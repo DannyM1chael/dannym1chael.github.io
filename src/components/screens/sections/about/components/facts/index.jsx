@@ -1,4 +1,5 @@
 import React from 'react';
+// import Odometer from 'react-odometerjs';
 
 function Facts(props) {
 
@@ -7,35 +8,35 @@ function Facts(props) {
             <div className="container">
                 <div className="section-title">
                     <h2>Facts</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Some facts about me</p>
                 </div>
                 <div className="row no-gutters">
                     <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div className="count-box">
                             <i className="icofont-simple-smile"></i>
-                            <span data-toggle="counter-up">232</span>
-                            <p><strong>Happy Clients</strong> consequuntur quae</p>
+                                <span>15</span>
+                            <p><strong>Happy Clients</strong></p>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div className="count-box">
                             <i className="icofont-document-folder"></i>
-                            <span data-toggle="counter-up">521</span>
-                            <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+                            <span>30</span>
+                            <p><strong>Projects</strong></p>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div className="count-box">
-                            <i className="icofont-live-support"></i>
-                            <span data-toggle="counter-up">1,463</span>
-                            <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+                            <i className="icofont-certificate-alt-1"></i>
+                            <span>2340</span>
+                            <p><strong>Hours Of Learning</strong></p>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div className="count-box">
-                            <i className="icofont-users-alt-5"></i>
-                            <span data-toggle="counter-up">15</span>
-                            <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+                            <i className="icofont-read-book"></i>
+                            <span>10</span>
+                            <p><strong>Years of XP</strong></p>
                         </div>
                     </div>
                 </div>

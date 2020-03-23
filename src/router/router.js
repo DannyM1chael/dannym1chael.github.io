@@ -10,10 +10,10 @@ const Contact = lazy(() => import('../components/screens/sections/contact'));
 
 export default (
     <Switch>
-        <Route exact path = { URL.HOME } component={ Home } />
-        <Route exact path = { URL.ABOUT } component={ About } />
-        <Route exact path = { URL.RESUME } component={ Resume } />
-        <Route exact path = { URL.PORTFOLIO } component={ Portfolio } />
-        <Route exact path = { URL.CONTACT } component={ Contact } />
+        <Route path = '/' component={ Home } />
+        <Route path = { URL.ABOUT } component={ About } />
+        <Route path = { URL.RESUME } component={ Resume } />
+        <Route path = { URL.PORTFOLIO } component={ Portfolio } />
+        <Route path = { URL.CONTACT } component={ Contact } />
     </Switch>
 )
