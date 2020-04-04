@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Portfolio(props) {
+
+    const FullStackApp = 'https://github.com/DannyM1chael/Realtime-chat-app';
     
     return(
         <section id="portfolio" className="portfolio section-bg">
@@ -24,8 +26,8 @@ export default function Portfolio(props) {
               <div className="portfolio-wrap">
                 <img src="" className="img-fluid" alt="" />
                 <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="App 1"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
+                  <Link to="#" className="venobox" title="App"><i className="bx bx-plus"></i></Link>
+                  <Link to= { FullStackApp } title="More Details"><i className="bx bx-link"></i></Link>
                 </div>
               </div>
             </div>
@@ -33,71 +35,8 @@ export default function Portfolio(props) {
               <div className="portfolio-wrap">
                 <img src="" className="img-fluid" alt="" />
                 <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="Web 3"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="App 2"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="Card 2"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="Web 2"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="App 3"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="Card 1"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="Card 3"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div className="portfolio-wrap">
-                <img src="" className="img-fluid" alt="" />
-                <div className="portfolio-links">
-                  <Link to="#" data-gall="portfolioGallery" className="venobox" title="Web 3"><i className="bx bx-plus"></i></Link>
-                  <Link to="#" title="More Details"><i className="bx bx-link"></i></Link>
+                  <Link to="#" className="venobox" title="Web"><i className="bx bx-plus"></i></Link>
+                  <Link to="" title="More Details"><i className="bx bx-link"></i></Link>
                 </div>
               </div>
             </div>

@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import NavSections from './nav';
-// import { animateScroll as scroll } from 'react-scroll';
 
 function Navigation(props) {
 
     const renderNavSections = (item, index) => {
-        
         return (
-            <li key={ index }><Link to= { `/#${item.section}` }>
+            <li key={ index }>
+                <Link to= { `${item.section}` } smooth={ true } className='links'>
                     <i className={ `${item.className}` }></i> 
-                    <span>{ `${item.spanText}`}</span>
+                    <span>
+                        { `${item.spanText}`}
+                    </span>
                 </Link>
             </li>
         )
