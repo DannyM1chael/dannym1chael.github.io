@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import NavSections from './nav';
+import NavSections from '../../api/nav';
 
 function Navigation(props) {
 

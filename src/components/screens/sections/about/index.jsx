@@ -1,6 +1,9 @@
 import React from 'react';
+// import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Facts from './components/facts';
 import Skills from './components/skills';
+import someSkills from '../../../api/skills';
+import SomeFacts from '../../../api/facts';
 
 function About(props) {
 
@@ -18,17 +21,16 @@ function About(props) {
                         </p>
                     </div>
                     <div className="row">
-                        <div className="col-lg-4">
-                            <img src={ProfileImg} className="img-fluid" alt="" />
-                        </div>
-                        <div className="col-lg-8 pt-4 pt-lg-0 content">
+                            <div className="col-lg-4">
+                                <img src={ProfileImg} className="img-fluid" alt="" />
+                            </div>
+                            <div className="col-lg-8 pt-4 pt-lg-0 content">
                             <h3>Web Developer</h3>
                             <div className="row">
                                 <div className="col-lg-6">
                                     <ul>
                                         <li><i className="icofont-rounded-right"></i> <strong>Birthday:</strong> 09 August 1987</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Phone:</strong> +7 985 190 90 35</li>
+                                        <li><i className="icofont-rounded-right"></i> <strong>Phone:</strong> +7 985-190-90-35</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>City:</strong> Moscow, Russia</li>
                                     </ul>
                                 </div>
@@ -44,8 +46,8 @@ function About(props) {
                     </div>
                 </div>
             </section>
-            <Facts />
-            <Skills />
+            <Facts facts={ SomeFacts }/>
+            <Skills skills={ someSkills }/>
         </React.Fragment>
     )
 }

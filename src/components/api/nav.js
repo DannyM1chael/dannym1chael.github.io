@@ -10,6 +10,11 @@ export default [
         spanText: 'About'
     },
     {
+        section: 'facts',
+        className: 'bx bx-briefcase-alt',
+        spanText: 'Facts'
+    },
+    {
         section: 'resume',
         className: 'bx bx-file-blank',
         spanText: 'Resume'

@@ -1,14 +1,13 @@
 import React from 'react';
-import SomeSkills from './skills';
 
-export default function Skills(props) {
+export default function Skills({skills}) {
 
     const renderSomeSkills = (item, index) => {
         return (
             <div className="progress" key= { index }>
                 <span className="skill">{ item.skill } <i className="val">{`${ item.value }%`}</i></span>
                 <div className="progress-bar-wrap">
-                    <div className="progress-bar"></div>
+                    <div className="progress-bar" style={{ width: `${item.value}%`}}></div>
                 </div>
             </div>
         )
@@ -22,7 +21,10 @@ export default function Skills(props) {
                 </div>
                 <div className="row skills-content">
                     <div className="col-lg-6">
-                        { SomeSkills.map(renderSomeSkills) }
+                        { skills.slice(0, skills.length/2).map(renderSomeSkills) }
+                    </div>
+                    <div className="col-lg-6">
+                        { skills.slice(skills.length/2).map(renderSomeSkills) }
                     </div>
                 </div>
             </div>
