@@ -9,9 +9,10 @@ Skills:
 HTML • CSS • JQuery • React.js • Sass • Redux • JavaScript • Vanilla.js • PHP
 
 Projects:
-
+<pre>
 •	Frontend e-commerce project on React, Redux (vegetable foods)
 •	Weather and Recipe app with using API
 •	Real-time chat app (Frontend на React, Backend на NodeJS, Socket.io)
 •	HTML coding of restaurant page
 •	To-do-list on React
+</pre>
