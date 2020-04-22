@@ -5,8 +5,18 @@ I'm a Web Developer with a passion for building meaningful products. I believe I
 Open for proposals)
 
 Skills:
-
-HTML • CSS • JQuery • React.js • Sass • Redux • JavaScript • Vanilla.js • PHP
+<pre>
+• HTML 
+• CSS
+• Sass
+• JavaScript
+• Vanilla.js
+• JQuery 
+• React  
+• Redux   
+• PHP
+• MySQL
+</pre>
 
 Projects:
 <pre>
