@@ -1,18 +1,18 @@
-Skills
+<b>Skills</b>
 <pre>
-• HTML 
-• CSS
-• Sass
-• JavaScript
-• Vanilla.js
-• JQuery 
-• React  
-• Redux   
-• PHP
-• MySQL
+•   HTML 
+•   CSS
+•   SASS
+•   JavaScript
+•   Vanilla.js
+•   JQuery 
+•   React  
+•   Redux   
+•   PHP
+•   MySQL
 </pre>
 
-Projects
+<b>Projects</b>
 <pre>
 •	Frontend e-commerce project on React, Redux (vegetable foods)
 •	Weather and Recipe app with using API
