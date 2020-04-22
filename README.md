@@ -8,6 +8,7 @@ Skills:
 
 HTML • CSS • JQuery • React.js • Sass • Redux • JavaScript • Vanilla.js • PHP
 
+<<<<<<< HEAD
 Projects:
 <pre>
 •	Frontend e-commerce project on React, Redux (vegetable foods)
@@ -16,3 +17,5 @@ Projects:
 •	HTML coding of restaurant page
 •	To-do-list on React
 </pre>
+=======
+>>>>>>> 1a5857376162674f6469a7ef62b617eb8db88f4c
