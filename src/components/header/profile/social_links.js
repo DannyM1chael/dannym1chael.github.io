@@ -1,5 +1,7 @@
 export default [
     'github',
     'skype',
-    'linkedin'
+    'linkedin',
+    'telegram',
+    'whatsapp'
 ]

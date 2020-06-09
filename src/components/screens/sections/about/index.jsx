@@ -32,6 +32,7 @@ function About(props) {
                                         <li><i className="icofont-rounded-right"></i> <strong>Birthday:</strong> 09 August 1987</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>Phone:</strong> +7 985-190-90-35</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>City:</strong> Moscow, Russia</li>
+                                        <li><i className="icofont-rounded-right"></i> <strong>Hobbies:</strong> Skydiving, Travelling</li>
                                     </ul>
                                 </div>
                                 <div className="col-lg-6">
@@ -39,6 +40,7 @@ function About(props) {
                                         <li><i className="icofont-rounded-right"></i> <strong>Age:</strong> 32</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>Degree:</strong> Junior</li>
                                         <li><i className="icofont-rounded-right"></i> <strong>Email:</strong> coldsoulrusirk@gmail.com</li>
+                                        <li><i className="icofont-rounded-right"></i> <strong>Telegram:</strong> @DannyM1chael</li>
                                     </ul>
                                 </div>
                             </div>

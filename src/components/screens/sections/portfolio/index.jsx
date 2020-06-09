@@ -1,4 +1,5 @@
 import React from 'react';
+import Project from '../portfolio/projects';
 
 export default function Portfolio(props) {
     
@@ -13,12 +14,13 @@ export default function Portfolio(props) {
             <div className="col-lg-12 d-flex justify-content-center">
               <ul id="portfolio-flters">
                 <li data-filter="*" className="filter-active">All</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-web">Full-Stack</li>
+                <li data-filter=".filter-frontend">Frontend</li>
+                <li data-filter=".filter-fullstack">Full-Stack</li>
               </ul>
             </div>
           </div>
           <div className="row portfolio-container">
+            <Project projectName={'Vegefoods'} />
           </div>
         </div>
       </section>
