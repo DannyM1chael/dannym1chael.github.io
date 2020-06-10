@@ -1,11 +1,15 @@
-import React from 'react';
-// import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React,{ useEffect } from 'react';
+import Aos from 'aos';
 import Facts from './components/facts';
 import Skills from './components/skills';
 import someSkills from '../../../api/skills';
 import SomeFacts from '../../../api/facts';
 
 function About(props) {
+
+    useEffect(() => {
+        Aos.init({});
+    }, []);
 
     const ProfileImg = process.env.PUBLIC_URL + '/assets/img/profile.jpg';
 
@@ -17,14 +21,15 @@ function About(props) {
                         <h2>About</h2>
                         <p> 
                             I'm a Web developer with a passion for building meaningful products. 
-                            I believe IT is the future, but technologies won't replace people at the end, they have to go forward together side by side.
+                            I believe IT is the future, but technologies won't replace people at the end, 
+                            they have to go forward together side by side.
                         </p>
                     </div>
                     <div className="row">
-                            <div className="col-lg-4">
+                            <div className="col-lg-4" data-aos="fade-right">
                                 <img src={ProfileImg} className="img-fluid" alt="" />
                             </div>
-                            <div className="col-lg-8 pt-4 pt-lg-0 content">
+                            <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <h3>Web Developer</h3>
                             <div className="row">
                                 <div className="col-lg-6">

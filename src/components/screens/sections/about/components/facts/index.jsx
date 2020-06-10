@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
 import CountUp from 'react-countup';
 
 function Facts({facts}) {
 
+    useEffect(() => {
+        Aos.init({});
+    }, []);
+
     const renderSomeFacts = (item, index) => {
         return (
-            <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" key= { index }>
+            <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" key= { index }>
                 <div className="count-box">
                     <i className={`${ item.className }`}></i>
                         <CountUp start={0} end={ item.spanText } duration={5}>

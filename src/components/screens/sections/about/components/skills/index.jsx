@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
 
 export default function Skills({skills}) {
+
+    useEffect(() => {
+        Aos.init({});
+    }, []);
 
     const renderSomeSkills = (item, index) => {
         return (
@@ -20,10 +25,10 @@ export default function Skills({skills}) {
                     <h2>Skills</h2>
                 </div>
                 <div className="row skills-content">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6" data-aos="fade-up">
                         { skills.slice(0, skills.length/2).map(renderSomeSkills) }
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         { skills.slice(skills.length/2).map(renderSomeSkills) }
                     </div>
                 </div>

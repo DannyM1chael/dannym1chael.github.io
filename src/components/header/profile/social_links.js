@@ -3,5 +3,5 @@ export default [
     'skype',
     'linkedin',
     'telegram',
-    'whatsapp'
+    'whatsapp',
 ]

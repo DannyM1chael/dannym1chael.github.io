@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
 import Form from './form';
 
 function Contact(props) {
 
+    useEffect(() => {
+        Aos.init({});
+      }, []);
+    
     return (
         <section id="contact" className="contact">
             <div className="container">
@@ -10,7 +15,7 @@ function Contact(props) {
                     <h2>Contact</h2>
                     <p>Feel free to contact me</p>
                 </div>
-                <div className="row">
+                <div className="row" data-aos="fade-in">
                     <div className="col-lg-5 d-flex align-items-stretch">
                         <div className="info">
                             <div className="address">

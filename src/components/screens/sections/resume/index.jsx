@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
 import Summary from './summary';
 import Education from './education';
 import Experience from './xp';
 
 function Resume(props) {
+
+  useEffect(() => {
+    Aos.init({});
+  }, []);
 
   return (
     <section id="resume" className="resume">
@@ -12,11 +17,11 @@ function Resume(props) {
           <h2>Resume</h2>
         </div>
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-up">
               <Summary />
               <Education />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <Experience />
           </div>
         </div>
