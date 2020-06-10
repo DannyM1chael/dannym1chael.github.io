@@ -6,9 +6,9 @@ export default function Profile(props) {
 
     const ProfileImg = process.env.PUBLIC_URL + '/assets/img/profile.jpg';
 
-    const renderLinks = (item) =>{
+    const renderLinks = ({name, page}) =>{
         return (
-            <Link to="#"  key={ item } className={`${ item }`}><i className={`bx bxl-${item}`}></i></Link>
+            <a href= { page }  key={ name } className={`${ name }`}><i className={`bx bxl-${name}`}></i></a>
         )
     };
 
@@ -17,7 +17,7 @@ export default function Profile(props) {
             <img src={ ProfileImg } alt=""/>
             <h1 className="text-light"><Link to= '/'>Denis Mikhalev</Link></h1>
             <div className="social-links mt-3 text-center">
-                { socialLinks.map(renderLinks) }
+                {socialLinks.map(renderLinks) }
             </div>
         </div>
     )

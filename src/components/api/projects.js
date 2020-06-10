@@ -1,9 +1,9 @@
-export default {
-    'Vegefoods': 'https://github.com/DannyM1chael/HackerU/tree/master/7_Frontend/project',
-    'Get/Check passes': 'https://github.com/skinnerdany/gov',
-    'COVID-19-Tracker' : 'https://github.com/DannyM1chael/COVID-19-Tracker',
-    'Realtime-chat-app': 'https://github.com/DannyM1chael/COVID-19-Tracker',
-    'Recipe-app': 'https://github.com/DannyM1chael/Recipe-app',
-    'Meditation-app':'https://github.com/DannyM1chael/Meditation-app',
-    'Currency-converter-app': 'https://github.com/DannyM1chael/Currency-converter-app'
-}
+export default [
+    {name:'Vegefoods', page:'https://github.com/DannyM1chael/HackerU/tree/master/7_Frontend/project'},
+    {name:'Get/Check passes', page: 'https://github.com/skinnerdany/gov'},
+    {name:'COVID-19-Tracker' , page: 'https://github.com/DannyM1chael/COVID-19-Tracker'},
+    {name:'Realtime-chat-app', page: 'https://github.com/DannyM1chael/COVID-19-Tracker'},
+    {name:'Recipe-app', page: 'https://github.com/DannyM1chael/Recipe-app'},
+    {name:'Meditation-app', page:'https://github.com/DannyM1chael/Meditation-app'},
+    {name:'Currency-converter-app', page: 'https://github.com/DannyM1chael/Currency-converter-app'}
+]

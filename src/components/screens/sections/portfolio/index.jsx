@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
-import Project from '../portfolio/projects';
+import Project from './project';
+import projectPages from '../../../api/projects'; 
 
 export default function Portfolio(props) {
 
   useEffect(() => {
     Aos.init({});
   }, []);
+
+  const renderProjects = ({name, page}, index) => {
+    return (
+      <Project projectName={name} key={index}/>
+    )
+  }
 
   return (
     <section id="portfolio" className="portfolio section-bg">
@@ -25,7 +32,7 @@ export default function Portfolio(props) {
           </div>
         </div>
         <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <Project projectName={'Vegefoods'} />
+          {projectPages.map(renderProjects)}
         </div>
       </div>
     </section>
