@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Project({name, page, img}) {
 
@@ -8,7 +7,7 @@ function Project({name, page, img}) {
             <div className="portfolio-wrap">
                 <img src={ img } className="img-fluid" alt=""/>
                 <div className="portfolio-links">
-                    <Link to={ img } title={ name }><i className="bx bx-plus"></i></Link>
+                    <a href= { img } title={ name }><i className="bx bx-plus"></i></a>
                     <a href= { page } target="blank" title="More Details"><i className="bx bx-link"></i></a>
                 </div>
             </div>
