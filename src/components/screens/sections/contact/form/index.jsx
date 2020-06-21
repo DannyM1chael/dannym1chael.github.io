@@ -4,7 +4,7 @@ export default function Form(props) {
 
     return (
         <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="#" className="php-email-form">
+            <form action="forms/contact.php" method="post" className="php-email-form">
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label htmlFor="name">Your Name</label>

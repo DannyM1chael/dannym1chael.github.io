@@ -9,9 +9,9 @@ export default function Portfolio(props) {
     Aos.init({});
   }, []);
 
-  const renderProjects = ({name, page}, index) => {
+  const renderProjects = ({name, page, img}, index) => {
     return (
-      <Project projectName={name} key={index}/>
+      <Project name={ name } page={ page } img={ img } key={ index }/>
     )
   }
 
