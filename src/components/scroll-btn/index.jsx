@@ -23,7 +23,7 @@ function ScrollButton(props) {
     return(
         <Link to="#" onClick= { scrollHandler } 
             className="back-to-top"
-            style={isScroll? {display: "block"} : {display: "none"}}
+            style={ isScroll? {display: "block"} : {display: "none"} }
         >
             <i className="icofont-simple-up"></i>
         </Link>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import NavSections from '../../api/nav';
 
-function Navigation(props) {
+function Navigation({ open }) {
 
     const renderNavSections = (item, index) => {
         return (
