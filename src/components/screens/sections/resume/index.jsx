@@ -7,7 +7,10 @@ import Experience from './xp';
 function Resume(props) {
 
   useEffect(() => {
-    Aos.init({});
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out-back"
+    });
   }, []);
 
   return (

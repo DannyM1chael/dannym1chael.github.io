@@ -5,7 +5,10 @@ import Form from './form';
 function Contact(props) {
 
     useEffect(() => {
-        Aos.init({});
+        Aos.init({
+          duration: 1000,
+          easing: "ease-in-out-back"
+        });
       }, []);
     
     return (
@@ -15,8 +18,8 @@ function Contact(props) {
                     <h2>Contact</h2>
                     <p>Feel free to contact me</p>
                 </div>
-                <div className="row" data-aos="fade-bottom" data-aos-delay="100">
-                    <div className="col-lg-5 d-flex align-items-stretch">
+                <div className="row">
+                    <div className="col-lg-5 d-flex align-items-stretch" data-aos="fade-right">
                         <div className="info">
                             <div className="address">
                                 <i className="icofont-google-map"></i>

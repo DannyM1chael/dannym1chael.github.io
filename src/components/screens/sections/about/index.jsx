@@ -8,8 +8,11 @@ import SomeFacts from '../../../api/facts';
 function About(props) {
 
     useEffect(() => {
-        Aos.init({});
-    }, []);
+        Aos.init({
+          duration: 1000,
+          easing: "ease-in-out-back"
+        });
+      }, []);
 
     const ProfileImg = process.env.PUBLIC_URL + '/assets/img/profile.jpg';
 

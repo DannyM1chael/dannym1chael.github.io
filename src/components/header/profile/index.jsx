@@ -8,7 +8,7 @@ export default function Profile(props) {
 
     const renderLinks = ({name, page}) =>{
         return (
-            <a href= { page }  key={ name } className={`${ name }`}><i className={`bx bxl-${name}`}></i></a>
+            <a href= { page } target="blank" key={ name } className={`${ name }`}><i className={`bx bxl-${name}`}></i></a>
         )
     };
 
