@@ -1,7 +1,7 @@
 .portfolio
     .portfolio-item
         margin-bottom: 30px
-    #portfolio-flters
+    #portfolio-filters
         padding: 0
         margin: 0 auto 35px auto
         list-style: none
@@ -26,6 +26,8 @@
                 margin-right: 0
         .filter-active
             color: #149ddd
+        .filter-nonactive
+            color: #272829
     .portfolio-wrap
         transition: 0.3s
         position: relative
@@ -73,5 +75,18 @@
                     background: rgba(20, 157, 221, 0.95)
             a + a
                 border-left: 1px solid #37b3ed
+.item-enter 
+  opacity: 0
+
+.item-enter-active 
+  opacity: 1
+  transition: opacity 500ms ease-out
+
+.item-exit 
+  opacity: 1
+
+.item-exit-active 
+  opacity: 0
+  transition: opacity 500ms ease-out
 
 

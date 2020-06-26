@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Project from './project';
 import projectPages from '../../../api/projects'; 
 
 export default function Portfolio(props) {
+
+  const[activeIndex, setActiveIndex] = useState(null);
+  const handleClick = index => {
+    setActiveIndex(index)
+  };
 
   const [state, setState] = useState({
     data:
@@ -28,12 +34,6 @@ export default function Portfolio(props) {
     });
   }, []);
 
-  const renderProjects = ({name, page, img}, index) => {
-    return (
-      <Project name={ name } page={ page } img={ img } key={ index }/>
-    )
-  }
-
   return (
     <section id="portfolio" className="portfolio section-bg">
       <div className="container">
@@ -43,17 +43,31 @@ export default function Portfolio(props) {
         </div>
         <div className="row" data-aos="fade-up">
           <div className="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
+            <ul id="portfolio-filters">
               {categories.map((category, index) => 
-                (<li key={ index } onClick={() => handleCategory(category)}>{ category }</li>))
+                (<li 
+                    key={ index }
+                    className={ activeIndex === index ? "filter-active" : "filter-nonactive" }
+                    onClick={() => handleCategory(category)}
+                    onMouseDown={() => handleClick(index)}
+                    name={ index }>
+                  { category }
+                </li>))
               }
             </ul>
           </div>
         </div>
-        <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          {data.map(renderProjects)}
-        </div>
+        <TransitionGroup className="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+            {data.map(({name, page, img}, index) => (
+              <CSSTransition
+                key={ index }
+                timeout={ 500 }
+                classNames="item">
+                <Project name={ name } page={ page } img={ img } key={ index } />
+              </CSSTransition>
+            ))}
+        </TransitionGroup>
       </div>
     </section>
   )
-}
+};
