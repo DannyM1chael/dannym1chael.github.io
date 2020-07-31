@@ -3,9 +3,8 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
-$data = file_get_contents("php/input");
+$data = file_get_contents("php://input");
 $_POST = json_decode($data, true);
-if(!$_POST){echo 'no data';}
 
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
