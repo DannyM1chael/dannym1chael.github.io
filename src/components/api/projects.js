@@ -28,7 +28,7 @@ export default [
     name: 'COVID-19-Tracker',
     page: 'https://covid19trackerapp2020.netlify.app/',
     img: Covid,
-    category: 'Fullstack',
+    category: 'Frontend',
   },
   {
     name: 'Realtime-chat (MERN + Docker)',
@@ -38,7 +38,7 @@ export default [
   },
   {
     name: 'Recipe-app',
-    page: 'https://github.com/DannyM1chael/Recipe-app',
+    page: 'https://recipeapp2020.netlify.app/',
     img: Recipe,
     category: 'Frontend',
   },
@@ -68,7 +68,7 @@ export default [
   },
   {
     name: 'Advice-app',
-    page: 'https://github.com/DannyM1chael/Advice-react-app',
+    page: 'https://adviceapp2020.netlify.app/',
     img: Advice,
     category: 'Frontend',
   },
