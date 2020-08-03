@@ -6,9 +6,6 @@ function Project({ name, page, img }) {
       <div className="portfolio-wrap">
         <img src={img} className="img-fluid" alt="" />
         <div className="portfolio-links">
-          <a href={img} title={name}>
-            <i className="bx bx-plus"></i>
-          </a>
           <a href={page} target="_blank" rel="noopener noreferrer" title="More Details">
             <i className="bx bx-link"></i>
           </a>
