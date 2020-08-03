@@ -32,7 +32,7 @@
                     background: #149ddd
                     color: #fff
             p
-            padding-top: 5px
+                padding-top: 5px
         .address:hover
             i                    
                 background: #149ddd
@@ -82,10 +82,11 @@
             font-weight: 400
             font-size: 13px
         .sending
-            display: none
+            display: block
             background: #fff
             text-align: center
             padding: 15px
+            border-radius: 4px
             &::before
                 content: ""
                 display: inline-block
@@ -98,19 +99,21 @@
                 -webkit-animation: animate-loading 1s linear infinite
                 animation: animate-loading 1s linear infinite
         .error-message
-            display: none
+            display: block
             color: #fff
             background: #ed3c0d
             text-align: center
             padding: 15px
             font-weight: 600
+            border-radius: 4px
         .sent-message
-            display: none
+            display: block
             color: #fff
             background: #18d26e
             text-align: center
             padding: 15px
             font-weight: 600
+            border-radius: 4px
         button
             background: #149ddd
             border: 0
@@ -120,4 +123,3 @@
             cursor: pointer
             &:hover
                 background: #37b3ed
-                

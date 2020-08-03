@@ -1,10 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
 import { useForm } from 'react-hook-form';
 
 export default function Form(props) {
+  const [status, setStatus] = useState('');
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const formData = JSON.stringify(data);
+    const xhr = new XMLHttpRequest();
+    xhr.open(formData.method, formData.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.upload.onprogress) {
+        setStatus({ status: 'Sending' });
+      }
+      if (xhr.status === 200) {
+        setStatus({ status: 'Success' });
+      } else {
+        setStatus({ status: 'Error' });
+      }
+    };
+    xhr.send(formData);
+  };
 
   useEffect(() => {
     Aos.init({
@@ -18,7 +36,11 @@ export default function Form(props) {
       className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch"
       data-aos="fade-left"
       data-aos-delay="100">
-      <form method="post" className="email-form" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        action="https://formspree.io/xrgyjlyy"
+        method="POST"
+        className="email-form"
+        onSubmit={handleSubmit(onSubmit)}>
         <div className="form-row">
           <div className="form-group col-md-6">
             <label htmlFor="name">Your Name</label>
@@ -69,13 +91,14 @@ export default function Form(props) {
             ref={register({ required: 'Please write me something' })}></textarea>
           {errors.message && <div className="validate">{errors.message.message}</div>}
         </div>
-        <div className="mb-3">
-          <div className="sending">Sending</div>
-          <div className="error-message"></div>
-          <div className="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div className="text-center">
-          <button type="submit">Send Message</button>
+        <div className="mb-3 text-center">
+          {status === 'Sending' && <div className="sending">Sending</div>}
+          {status === 'Error' && <div className="error-message">Oops, there was an error</div>}
+          {status === 'Success' ? (
+            <div className="sent-message">Your message has been sent. Thank you!</div>
+          ) : (
+            <button type="submit">Send Message</button>
+          )}
         </div>
       </form>
     </div>
