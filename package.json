@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dannym1chael.github.io/Portfolio-app",
+  "homepage": "https://DannyM1chael.github.io/Portfolio-app",
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +21,7 @@
     "react-typed": "^1.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

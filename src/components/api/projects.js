@@ -1,15 +1,15 @@
-const Vegefoods = process.env.PUBLIC_URL + 'assets/img/projects/Vegefoods.png';
-const Covid = process.env.PUBLIC_URL + 'assets/img/projects/COVID.png';
-const MERN = process.env.PUBLIC_URL + 'assets/img/projects/MERN.png';
-const Meditation = process.env.PUBLIC_URL + 'assets/img/projects/Meditation.png';
-const Recipe = process.env.PUBLIC_URL + 'assets/img/projects/Recipe.png';
-const Advice = process.env.PUBLIC_URL + 'assets/img/projects/Advice.png';
-const Joker = process.env.PUBLIC_URL + 'assets/img/projects/Joker.png';
-const CRUD = process.env.PUBLIC_URL + 'assets/img/projects/CRUD.png';
-const Pass = process.env.PUBLIC_URL + 'assets/img/projects/Pass.png';
-const GithubJobs = process.env.PUBLIC_URL + 'assets/img/projects/github_jobs.png';
-const PizzaDelivery = process.env.PUBLIC_URL + 'assets/img/projects/PizzaDelivery.png';
-const reduxCart = process.env.PUBLIC_URL + 'assets/img/projects/reduxCart.png';
+const Vegefoods = process.env.PUBLIC_URL + '/assets/img/projects/Vegefoods.png';
+const Covid = process.env.PUBLIC_URL + '/assets/img/projects/COVID.png';
+const MERN = process.env.PUBLIC_URL + '/assets/img/projects/MERN.png';
+const Meditation = process.env.PUBLIC_URL + '/assets/img/projects/Meditation.png';
+const Recipe = process.env.PUBLIC_URL + '/assets/img/projects/Recipe.png';
+const Advice = process.env.PUBLIC_URL + '/assets/img/projects/Advice.png';
+const Joker = process.env.PUBLIC_URL + '/assets/img/projects/Joker.png';
+const CRUD = process.env.PUBLIC_URL + '/assets/img/projects/CRUD.png';
+const Pass = process.env.PUBLIC_URL + '/assets/img/projects/Pass.png';
+const GithubJobs = process.env.PUBLIC_URL + '/assets/img/projects/github_jobs.png';
+const PizzaDelivery = process.env.PUBLIC_URL + '/assets/img/projects/PizzaDelivery.png';
+const reduxCart = process.env.PUBLIC_URL + '/assets/img/projects/reduxCart.png';
 
 export default [
   {
