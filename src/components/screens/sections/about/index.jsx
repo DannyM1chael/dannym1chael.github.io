@@ -5,7 +5,7 @@ import Skills from './components/skills';
 import someSkills from '../../../api/skills';
 import SomeFacts from '../../../api/facts';
 
-function About(props) {
+function About() {
 
     useEffect(() => {
         Aos.init({
@@ -15,6 +15,7 @@ function About(props) {
       }, []);
 
     const ProfileImg = process.env.PUBLIC_URL + '/assets/img/profile.jpg';
+    const currentYear = new Date().getFullYear();
 
     return (
         <React.Fragment>
@@ -37,18 +38,18 @@ function About(props) {
                             <div className="row">
                                 <div className="col-lg-6">
                                     <ul>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Birthday:</strong> 09 August 1987</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Phone:</strong> +7 985-190-90-35</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>City:</strong> Moscow, Russia</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Hobbies:</strong> Skydiving, Travelling</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Birthday:</strong> 09 August 1987</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Phone:</strong> +7 985-190-90-35</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>City:</strong> Moscow, Russia</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Hobbies:</strong> Skydiving, Travelling</li>
                                     </ul>
                                 </div>
                                 <div className="col-lg-6">
                                     <ul>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Age:</strong> 32</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Degree:</strong> Junior</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Email:</strong> coldsoulrusirk@gmail.com</li>
-                                        <li><i className="icofont-rounded-right"></i> <strong>Telegram:</strong> @DannyM1chael</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Age:</strong> {currentYear-1987}</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Degree:</strong> Junior</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Email:</strong> coldsoulrusirk@gmail.com</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Telegram:</strong> @DannyM1chael</li>
                                     </ul>
                                 </div>
                             </div>

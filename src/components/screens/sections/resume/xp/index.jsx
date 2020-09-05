@@ -6,6 +6,14 @@ export default  function Experience(props) {
         <React.Fragment>
             <h3 className="resume-title">Professional Experience</h3>
             <div className="resume-item">
+              <h4>Web Developer</h4>
+              <h5>2020 - current time</h5>
+              <p><em>innoscripta GmbH</em></p>
+              <ul>
+                <li>Developed CRM (frontend on React, backend on Laravel)</li>
+              </ul>
+            </div>
+            <div className="resume-item">
                 <h4>Specialist</h4>
                 <h5>2018 - 2020</h5>
                 <p><em>EL AL Israel Airlines, Moscow, Russia</em></p>

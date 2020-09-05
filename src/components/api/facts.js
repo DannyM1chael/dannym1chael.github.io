@@ -1,17 +1,17 @@
 export default [
   {
     className: 'icofont-brainstorming',
-    spanText: 12,
+    spanText: 13,
     strongText: 'New Technologies',
   },
   {
     className: 'icofont-document-folder',
-    spanText: 26,
+    spanText: 27,
     strongText: 'Projects',
   },
   {
     className: 'icofont-certificate-alt-1',
-    spanText: 2340,
+    spanText: 3060,
     strongText: 'Hours Of Learning',
   },
   {

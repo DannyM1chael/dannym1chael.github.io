@@ -22,5 +22,13 @@ export default [
     {
         skill: 'MySQL',
         value: 30
+    },
+    {
+        skill: 'Laravel',
+        value: 30
+    },
+    {
+        skill: 'Vue',
+        value: 30
     }
 ]
