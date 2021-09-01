@@ -1,7 +1,7 @@
 export default [
     {   
         skill: 'HTML',
-        value: 100
+        value: 90
     },
     {
         skill: 'CSS',
@@ -9,15 +9,31 @@ export default [
     },
     {
         skill: 'JavaScript',
-        value: 65
-    },
-    {
-        skill: 'PHP',
-        value: 40
+        value: 75
     },
     {
         skill: 'REACT',
-        value: 60
+        value: 70
+    },
+    {
+        skill: 'Redux',
+        value: 90
+    },
+    {
+        skill: 'NEXT',
+        value: 70
+    },
+    {
+        skill: 'Node/Express',
+        value: 50
+    },
+    {
+        skill: 'Vue',
+        value: 70
+    },
+    {
+        skill: 'PHP 7',
+        value: 40
     },
     {
         skill: 'MySQL',
@@ -28,7 +44,15 @@ export default [
         value: 30
     },
     {
-        skill: 'Vue',
-        value: 30
-    }
+        skill: 'Docker',
+        value: 50
+    },
+    {
+        skill: 'K8s',
+        value: 20
+    },
+    {
+        skill: 'Git',
+        value: 50
+    },
 ]

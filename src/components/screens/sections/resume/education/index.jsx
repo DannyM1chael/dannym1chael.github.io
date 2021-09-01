@@ -3,7 +3,7 @@ import React from 'react';
 export default function Education(props) {
 
     return (
-        <React.Fragment>
+        <>
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
                 <h4>Bachelor of Computer Science</h4>
@@ -13,7 +13,21 @@ export default function Education(props) {
                 <p>Specialty – Computer science</p>
             </div>
             <div className="resume-item">
-                <h4>Full-Stack Development</h4>
+                <h4>Application Security Environment</h4>
+                <h5>2021</h5>
+                <p><em>HackerU</em></p>
+                <ul>
+                    <li>Application environment</li>
+                    <li>Docker, Kubernetes</li>
+                    <li>Docker container security</li>
+                    <li>Kubernetes security</li>
+                    <li>Secure Apache Configuration, Nginx</li>
+                    <li>Cloud architecture and cloud security AWS</li>
+                    <li>Securing AWS IAM</li>
+                </ul>
+            </div>
+            <div className="resume-item">
+                <h4>Full-Stack Web Development</h4>
                 <h5>2019 - 2020</h5>
                 <p><em>HackerU</em></p>
                 <ul>
@@ -46,7 +60,6 @@ export default function Education(props) {
                 <p>Faculty – Traffic management</p>
                 <p>Specialty – Engineer</p>
             </div>
-
-        </React.Fragment>
+        </>
     )
 }

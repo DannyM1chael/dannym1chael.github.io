@@ -1,12 +1,12 @@
 export default [
   {
     className: 'icofont-brainstorming',
-    spanText: 13,
+    spanText: 14,
     strongText: 'New Technologies',
   },
   {
     className: 'icofont-document-folder',
-    spanText: 27,
+    spanText: 12,
     strongText: 'Projects',
   },
   {
@@ -16,7 +16,7 @@ export default [
   },
   {
     className: 'icofont-read-book',
-    spanText: 10,
+    spanText: 2.3,
     strongText: 'Years of XP',
   },
 ];

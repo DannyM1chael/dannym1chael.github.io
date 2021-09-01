@@ -12,7 +12,7 @@ export default function Skills({skills}) {
             <div className="progress" key= { index }>
                 <span className="skill">{ item.skill } <i className="val">{`${ item.value }%`}</i></span>
                 <div className="progress-bar-wrap">
-                    <div className="progress-bar" style={{ width: `${item.value}%`}}></div>
+                    <div className="progress-bar" style={{width: `${item.value}%`}}/>
                 </div>
             </div>
         )

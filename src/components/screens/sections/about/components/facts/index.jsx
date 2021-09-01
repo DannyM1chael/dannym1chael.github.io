@@ -12,7 +12,7 @@ function Facts({facts}) {
         return (
             <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" key= { index }>
                 <div className="count-box">
-                    <i className={`${ item.className }`}></i>
+                    <i className={`${item.className}`}/>
                         <CountUp start={0} end={ item.spanText } duration={10}>
                             <span>
                                 {`${ item.spanText }`}

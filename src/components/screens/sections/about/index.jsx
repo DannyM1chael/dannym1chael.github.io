@@ -47,7 +47,7 @@ function About() {
                                 <div className="col-lg-6">
                                     <ul>
                                         <li><i className="icofont-rounded-right"/> <strong>Age:</strong> {currentYear-1987}</li>
-                                        <li><i className="icofont-rounded-right"/> <strong>Degree:</strong> Junior</li>
+                                        <li><i className="icofont-rounded-right"/> <strong>Degree:</strong> BS</li>
                                         <li><i className="icofont-rounded-right"/> <strong>Email:</strong> coldsoulrusirk@gmail.com</li>
                                         <li><i className="icofont-rounded-right"/> <strong>Telegram:</strong> @DannyM1chael</li>
                                     </ul>
