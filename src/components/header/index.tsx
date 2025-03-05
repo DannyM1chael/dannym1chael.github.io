@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Navigation } from "./navigation";
 import { Profile } from "./profile";
 import { ToggleMenu } from "./toggle-menu";
 import { useOnClickOutside } from "@/hooks";
+import { cn } from "@/lib";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
@@ -13,21 +14,25 @@ export const Header = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleMobile);
+    handleMobile();
     return () => {
       window.removeEventListener("resize", handleMobile);
     };
   }, []);
 
-  const node = useRef();
+  const node = useRef(null);
   useOnClickOutside(node, () => setOpen(false));
 
   return (
     <header
       id="header"
-      style={!mobile && !open ? { left: "-300px" } : { left: "0px" }}
+      className={cn(
+        "fixed top-0 bottom-0 w-[300px] transition-all duration-500 ease-in-out z-50 px-4 bg-[#040b14] overflow-y-auto",
+        !mobile && !open ? "-left-[300px]" : "left-0",
+      )}
       ref={node}
     >
-      <div className="d-flex flex-column">
+      <div className="flex flex-col">
         <Profile />
         <Navigation open={open} setOpen={setOpen} />
         <ToggleMenu open={open} setOpen={setOpen} />

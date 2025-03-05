@@ -34,22 +34,24 @@ export const Form = () => {
 
   return (
     <div
-      className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch"
+      className="w-full lg:w-7/12 mt-5 lg:mt-0 flex items-stretch"
       data-aos="fade-left"
       data-aos-delay="100"
     >
       <form
         action="https://formspree.io/xrgyjlyy"
         method="POST"
-        className="email-form"
+        className="w-full p-8 bg-white shadow-lg"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="form-row">
-          <div className="form-group col-md-6">
-            <label htmlFor="name">Your Name</label>
+        <div className="flex flex-wrap -mx-2">
+          <div className="w-full md:w-1/2 px-2 mb-4">
+            <label htmlFor="name" className="block mb-2">
+              Your Name
+            </label>
             <input
               type="text"
-              className="form-control"
+              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
               id="name"
               {...register("name", {
                 required: "Please enter your name",
@@ -57,14 +59,18 @@ export const Form = () => {
               })}
             />
             {errors.name && (
-              <div className="validate">{errors.name.message}</div>
+              <div className="block text-red-500 text-xs font-normal mt-1">
+                {errors.name.message}
+              </div>
             )}
           </div>
-          <div className="form-group col-md-6">
-            <label htmlFor="email">Your Email</label>
+          <div className="w-full md:w-1/2 px-2 mb-4">
+            <label htmlFor="email" className="block mb-2">
+              Your Email
+            </label>
             <input
               type="email"
-              className="form-control"
+              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
               id="email"
               {...register("email", {
                 required: "Please check your email",
@@ -72,15 +78,19 @@ export const Form = () => {
               })}
             />
             {errors.email && (
-              <div className="validate">{errors.email.message}</div>
+              <div className="block text-red-500 text-xs font-normal mt-1">
+                {errors.email.message}
+              </div>
             )}
           </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="subject">Subject</label>
+        <div className="mb-4">
+          <label htmlFor="subject" className="block mb-2">
+            Subject
+          </label>
           <input
             type="text"
-            className="form-control"
+            className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
             id="subject"
             {...register("subject", {
               required: "Please enter name of subject",
@@ -88,37 +98,52 @@ export const Form = () => {
             })}
           />
           {errors.subject && (
-            <div className="validate">{errors.subject.message}</div>
+            <div className="block text-red-500 text-xs font-normal mt-1">
+              {errors.subject.message}
+            </div>
           )}
         </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
+        <div className="mb-4">
+          <label htmlFor="message" className="block mb-2">
+            Message
+          </label>
           <textarea
-            className="form-control"
+            className="w-full rounded-none shadow-none text-sm p-3 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
             rows="10"
             {...register("message", { required: "Please write me something" })}
           ></textarea>
           {errors.message && (
-            <div className="validate">{errors.message.message}</div>
+            <div className="block text-red-500 text-xs font-normal mt-1">
+              {errors.message.message}
+            </div>
           )}
         </div>
         <div className="mb-3">
           {status === "Error" && (
-            <div className="error-message">Oops, there was an error</div>
+            <div className="block text-white bg-red-600 text-center p-4 font-semibold rounded">
+              Oops, there was an error
+            </div>
           )}
           {status === "Success" && (
-            <div className="sent-message">
+            <div className="block text-white bg-green-500 text-center p-4 font-semibold rounded">
               Your message has been sent. Thank you!
             </div>
           )}
         </div>
         <div className="text-center">
           {status === "Progress" ? (
-            <button className="btn btn-primary" type="button" disabled>
+            <button
+              className="bg-[#149ddd] border-0 py-2.5 px-6 text-white rounded cursor-pointer outline-none hover:bg-[#37b3ed]"
+              type="button"
+              disabled
+            >
               Sending...
             </button>
           ) : (
-            <button className="btn btn-primary" type="submit">
+            <button
+              className="bg-[#149ddd] border-0 py-2.5 px-6 text-white rounded cursor-pointer outline-none hover:bg-[#37b3ed]"
+              type="submit"
+            >
               Send Message
             </button>
           )}

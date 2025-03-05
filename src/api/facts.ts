@@ -16,7 +16,7 @@ export const facts = [
   },
   {
     className: "icofont-read-book",
-    spanText: 2.3,
+    spanText: 5,
     strongText: "Years of XP",
   },
 ];

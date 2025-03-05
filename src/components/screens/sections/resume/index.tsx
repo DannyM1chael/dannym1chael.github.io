@@ -13,17 +13,21 @@ export const Resume = () => {
   }, []);
 
   return (
-    <section id="resume" className="resume">
-      <div className="container">
-        <div className="section-title">
-          <h2>Resume</h2>
+    <section id="resume" className="py-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">Resume</h2>
         </div>
-        <div className="row">
-          <div className="col-lg-6" data-aos="fade-up">
+        <div className="flex flex-wrap">
+          <div className="w-full lg:w-1/2 px-4" data-aos="fade-up">
             <Summary />
             <Education />
           </div>
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="w-full lg:w-1/2 px-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <Experience />
           </div>
         </div>

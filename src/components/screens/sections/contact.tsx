@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Aos from "aos";
 import { Form } from "./form";
 
@@ -11,27 +11,33 @@ export const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <div className="section-title">
-          <h2>Contact</h2>
-          <p>Feel free to contact me</p>
+    <section id="contact" className="py-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+          <p className="text-base">Feel free to contact me</p>
         </div>
-        <div className="row">
+        <div className="flex flex-wrap">
           <div
-            className="col-lg-5 d-flex align-items-stretch"
+            className="w-full lg:w-5/12 flex items-stretch"
             data-aos="fade-right"
           >
-            <div className="info">
-              <div className="address">
-                <i className="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>Serbia</p>
+            <div className="p-8 bg-white w-full shadow-lg">
+              <div className="mb-5">
+                <i className="icofont-google-map text-xl text-[#149ddd] float-left w-11 h-11 bg-[#dff3fc] flex justify-center items-center rounded-full hover:bg-[#149ddd] hover:text-white"></i>
+                <h4 className="pl-16 text-2xl font-semibold mb-1 text-[#050d18]">
+                  Location:
+                </h4>
+                <p className="pl-16 mb-5 text-sm text-[#173b6c]">Serbia</p>
               </div>
-              <div className="email">
-                <i className="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>denis.mikhalev.pro@gmail.com.com</p>
+              <div className="group">
+                <i className="icofont-envelope text-xl text-[#149ddd] float-left w-11 h-11 bg-[#dff3fc] flex justify-center items-center rounded-full group-hover:bg-[#149ddd] group-hover:text-white"></i>
+                <h4 className="pl-16 text-2xl font-semibold mb-1 text-[#050d18]">
+                  Email:
+                </h4>
+                <p className="pl-16 mb-5 text-sm text-[#173b6c] pt-1">
+                  denis.mikhalev.pro@gmail.com
+                </p>
               </div>
             </div>
           </div>
