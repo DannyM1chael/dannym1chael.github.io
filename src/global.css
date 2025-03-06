@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --color-border: hsl(var(--border));
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+
+    --color-primary: hsl(var(--primary));
+    --color-primary-light: hsl(var(--primary-light));
+    --color-primary-dark: hsl(var(--primary-dark));
+
+    --color-secondary: hsl(var(--secondary));
+    --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+    --color-heading: hsl(var(--heading));
+    --color-body: hsl(var(--body));
+    --color-muted: hsl(var(--muted));
+    --color-text-nav: hsl(var(--text-nav));
+
+    --color-sidebar: hsl(var(--sidebar));
+    --color-sidebar-accent: hsl(var(--sidebar-accent));
+    --color-sidebar-border: hsl(var(--sidebar-border));
+
+    /* Shadows */
+    --shadow-card: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+
+    /* Transitions */
+    --transition-default: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
+}
+
+@layer base {
+    :root {
+        /* Base colors */
+        --background: 220 33% 98%;  /* Light background */
+        --foreground: 214 20% 15%;  /* Dark text */
+        --border: 213 15% 85%;
+
+        /* Primary blue colors */
+        --primary: 199 84% 55%;       /* #149ddd - Main blue */
+        --primary-light: 199 86% 93%; /* #dff3fc - Light blue background */
+        --primary-dark: 211 54% 36%;  /* #1f5297 - Dark blue for timeline */
+
+        /* Secondary colors */
+        --secondary: 211 81% 91%;         /* #e4edf9 - Light blue background */
+        --secondary-foreground: 0 0% 11%; /* Dark text */
+
+        /* Text colors */
+        --heading: 212 71% 6%;      /* #050d18 - Dark headings */
+        --body: 213 64% 26%;        /* #173b6c - Body text */
+        --muted: 219 6% 68%;        /* #a8a9b4 - Muted text */
+        --text-nav: 214 3% 30%;     /* #272829 - Navigation text */
+
+        /* Specialty */
+        --sidebar: 218 52% 5%;         /* #040b14 - Sidebar background */
+        --sidebar-accent: 228 19% 16%; /* #212431 - Social icon background */
+        --sidebar-border: 225 15% 21%; /* #2c2f3f - Profile image border */
+    }
+
+    .dark {
+        /* We can define dark mode colors here in the future */
+        --background: 218 52% 5%;
+        --foreground: 0 0% 100%;
+    }
+
+    .item-enter {
+        opacity: 0;
+    }
+    .item-enter-active {
+        opacity: 1;
+        transition: opacity 500ms ease-out;
+    }
+    .item-exit {
+        opacity: 1;
+    }
+    .item-exit-active {
+        opacity: 0;
+        transition: opacity 500ms ease-out;
+    }
+}
