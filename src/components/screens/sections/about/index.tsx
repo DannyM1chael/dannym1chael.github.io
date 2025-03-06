@@ -3,7 +3,6 @@ import Aos from "aos";
 import { Facts } from "./facts";
 import { Skills } from "./skills";
 import { facts, skills } from "@/api";
-import ProfileImg from "/assets/img/profile.jpg";
 
 export const About = () => {
   useEffect(() => {
@@ -29,7 +28,7 @@ export const About = () => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3" data-aos="fade-right">
               <img
-                src={ProfileImg}
+                src="/assets/img/profile.jpg"
                 className="max-w-full h-auto"
                 alt="Denis Mikhalev"
               />

@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { menu } from "@/config";
+import { menu, MenuItem } from "@/config";
 import { cn } from "@/lib";
 
-export const Navigation = ({ open, setOpen }) => {
-  const renderNavSections = (item, index) => {
+interface NavigationProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+export const Navigation = ({ open, setOpen }: NavigationProps) => {
+  const renderNavSections = (item: MenuItem, index: number) => {
     return (
       <li key={index} className="relative whitespace-nowrap text-white">
         <Link

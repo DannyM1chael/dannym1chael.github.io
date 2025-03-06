@@ -1,28 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Aos from "aos";
 import axios from "axios";
+import { z } from "zod";
 
-export const Form = () => {
-  const [status, setStatus] = useState("");
+const schema = z.object({
+  name: z.string().min(3, { message: "Your name is too short" }),
+  email: z.string().email({ message: "Please check your email" }),
+  subject: z.string().min(4, { message: "Your topic is too short" }),
+  message: z.string().min(1, { message: "Please write me something" }),
+});
+
+type FormData = z.infer<typeof schema>;
+
+export const Form: React.FC = () => {
+  const [status, setStatus] = useState<string>("");
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data: FormData) => {
     setStatus("Progress");
-    axios
-      .post("https://formspree.io/xrgyjlyy", data)
-      .then((res) => {
-        setStatus("Success");
-        reset();
-      })
-      .catch((error) => {
-        setStatus("Error");
-      });
+    try {
+      await axios.post("https://formspree.io/xrgyjlyy", data);
+      setStatus("Success");
+      reset();
+    } catch (error) {
+      console.error(error);
+      setStatus("Error");
+    }
   };
 
   useEffect(() => {
@@ -39,8 +51,6 @@ export const Form = () => {
       data-aos-delay="100"
     >
       <form
-        action="https://formspree.io/xrgyjlyy"
-        method="POST"
         className="w-full p-8 bg-white shadow-lg"
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -51,12 +61,9 @@ export const Form = () => {
             </label>
             <input
               type="text"
-              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
               id="name"
-              {...register("name", {
-                required: "Please enter your name",
-                minLength: { value: 3, message: "Your name is too short" },
-              })}
+              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+              {...register("name")}
             />
             {errors.name && (
               <div className="block text-red-500 text-xs font-normal mt-1">
@@ -70,12 +77,9 @@ export const Form = () => {
             </label>
             <input
               type="email"
-              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
               id="email"
-              {...register("email", {
-                required: "Please check your email",
-                pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i },
-              })}
+              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+              {...register("email")}
             />
             {errors.email && (
               <div className="block text-red-500 text-xs font-normal mt-1">
@@ -90,12 +94,9 @@ export const Form = () => {
           </label>
           <input
             type="text"
-            className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
             id="subject"
-            {...register("subject", {
-              required: "Please enter name of subject",
-              minLength: { value: 4, message: "Your topic is too short" },
-            })}
+            className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+            {...register("subject")}
           />
           {errors.subject && (
             <div className="block text-red-500 text-xs font-normal mt-1">
@@ -108,9 +109,10 @@ export const Form = () => {
             Message
           </label>
           <textarea
-            className="w-full rounded-none shadow-none text-sm p-3 border border-gray-300 focus:border-[#149ddd] focus:ring-[#149ddd] outline-none"
-            rows="10"
-            {...register("message", { required: "Please write me something" })}
+            id="message"
+            className="w-full rounded-none shadow-none text-sm p-3 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+            rows={10}
+            {...register("message")}
           ></textarea>
           {errors.message && (
             <div className="block text-red-500 text-xs font-normal mt-1">
@@ -133,16 +135,16 @@ export const Form = () => {
         <div className="text-center">
           {status === "Progress" ? (
             <button
-              className="bg-[#149ddd] border-0 py-2.5 px-6 text-white rounded cursor-pointer outline-none hover:bg-[#37b3ed]"
               type="button"
+              className="bg-primary border-0 py-2.5 px-6 text-white rounded cursor-pointer outline-none hover:bg-primary-dark"
               disabled
             >
               Sending...
             </button>
           ) : (
             <button
-              className="bg-[#149ddd] border-0 py-2.5 px-6 text-white rounded cursor-pointer outline-none hover:bg-[#37b3ed]"
               type="submit"
+              className="bg-primary border-0 py-2.5 px-6 text-white rounded cursor-pointer outline-none hover:bg-primary-dark"
             >
               Send Message
             </button>

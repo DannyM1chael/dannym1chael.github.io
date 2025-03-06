@@ -1,4 +1,9 @@
-export const skills = [
+export interface SkillItem {
+  skill: string;
+  value: number;
+}
+
+export const skills: SkillItem[] = [
   {
     skill: "HTML",
     value: 90,
@@ -12,7 +17,15 @@ export const skills = [
     value: 75,
   },
   {
-    skill: "REACT",
+    skill: "TypeScript",
+    value: 75,
+  },
+  {
+    skill: "Go",
+    value: 75,
+  },
+  {
+    skill: "React",
     value: 70,
   },
   {
@@ -20,11 +33,11 @@ export const skills = [
     value: 90,
   },
   {
-    skill: "NEXT",
+    skill: "Next.js",
     value: 70,
   },
   {
-    skill: "Node/Express",
+    skill: "Node.js",
     value: 50,
   },
   {
@@ -32,24 +45,12 @@ export const skills = [
     value: 70,
   },
   {
-    skill: "PHP 7",
-    value: 40,
-  },
-  {
     skill: "MySQL",
-    value: 30,
-  },
-  {
-    skill: "Laravel",
     value: 30,
   },
   {
     skill: "Docker",
     value: 50,
-  },
-  {
-    skill: "K8s",
-    value: 20,
   },
   {
     skill: "Git",

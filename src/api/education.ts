@@ -1,4 +1,12 @@
-export const educationItems = [
+export interface EducationItem {
+  title?: string;
+  period: string;
+  institution?: string;
+  details?: string[];
+  listItems?: string[];
+}
+
+export const educationItems: EducationItem[] = [
   {
     title: "Bachelor of Computer Science",
     period: "2019 - 2023",

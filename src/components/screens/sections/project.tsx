@@ -1,6 +1,12 @@
 import React from "react";
 
-export const Project = ({ name, page, img }) => {
+export interface ProjectProps {
+  name: string;
+  page: string;
+  img: string;
+}
+
+export const Project = ({ name, page, img }: ProjectProps) => {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
       <div className="relative overflow-hidden z-10 transition-all duration-300 group">
@@ -12,7 +18,7 @@ export const Project = ({ name, page, img }) => {
             target="_blank"
             rel="noopener noreferrer"
             title="More Details"
-            className="w-full text-white text-center text-2xl bg-[rgba(20,157,221,0.75)] hover:bg-[rgba(20,157,221,0.95)] transition-all duration-300"
+            className="w-full text-white text-center text-2xl bg-primary/75 hover:bg-primary/95 transition-all duration-300"
           >
             <i className="bx bx-link py-2 block"></i>
           </a>

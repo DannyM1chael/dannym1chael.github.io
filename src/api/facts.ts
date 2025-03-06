@@ -1,4 +1,10 @@
-export const facts = [
+export interface FactItem {
+  className: string;
+  spanText: number;
+  strongText: string;
+}
+
+export const facts: FactItem[] = [
   {
     className: "icofont-brainstorming",
     spanText: 14,

@@ -20,14 +20,14 @@ export const Header = () => {
     };
   }, []);
 
-  const node = useRef(null);
+  const node = useRef<HTMLElement | null>(null);
   useOnClickOutside(node, () => setOpen(false));
 
   return (
     <header
       id="header"
       className={cn(
-        "fixed top-0 bottom-0 w-[300px] transition-all duration-500 ease-in-out z-50 px-4 bg-[#040b14] overflow-y-auto",
+        "fixed top-0 bottom-0 w-[300px] transition-all duration-500 ease-in-out z-50 px-4 bg-sidebar",
         !mobile && !open ? "-left-[300px]" : "left-0",
       )}
       ref={node}

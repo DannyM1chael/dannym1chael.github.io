@@ -1,21 +1,26 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
+import { SkillItem } from "@/api";
 
-export const Skills = ({ skills }) => {
+interface SkillsProps {
+  skills: SkillItem[];
+}
+
+export const Skills = ({ skills }: SkillsProps) => {
   useEffect(() => {
     Aos.init({});
   }, []);
 
-  const renderSkills = (item, index) => {
+  const renderSkills = (item: SkillItem, index: number) => {
     return (
       <div className="block h-[50px] mb-6" key={index}>
-        <span className="p-0 mb-1.5 uppercase block font-semibold font-['Poppins',sans-serif] text-[#050d18]">
+        <span className="p-0 mb-1.5 uppercase block font-semibold font-['Poppins',sans-serif] text-heading">
           {item.skill}{" "}
           <i className="float-right font-normal">{`${item.value}%`}</i>
         </span>
-        <div className="bg-[#dce8f8] w-full">
+        <div className="bg-secondary w-full">
           <div
-            className="h-2.5 transition-all duration-900 ease-in-out delay-900 bg-[#149ddd]"
+            className="h-2.5 transition-all duration-900 ease-in-out delay-900 bg-primary"
             style={{ width: `${item.value}%` }}
           />
         </div>

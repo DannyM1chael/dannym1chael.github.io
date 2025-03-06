@@ -1,4 +1,9 @@
-export const social = [
+export interface ProfileLink {
+  name: string;
+  page: string;
+}
+
+export const profile: ProfileLink[] = [
   { name: "github", page: "https://github.com/DannyM1chael" },
   {
     name: "linkedin",

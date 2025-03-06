@@ -1,19 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { social } from "@/config";
-import ProfileImg from "/assets/img/profile.jpg";
 import { cn } from "@/lib";
+import { profile, ProfileLink } from "@/api";
 
-export const Profile = () => {
-  const renderLinks = ({ name, page }) => (
+interface ProfileProps {
+  links?: ProfileLink[];
+}
+
+export const Profile = ({ links = profile }: ProfileProps) => {
+  const renderLinks = ({ name, page }: ProfileLink) => (
     <a
       href={page}
       target="_blank"
       rel="noopener noreferrer"
       key={name}
       className={cn(
-        "inline-block bg-[#212431] text-white leading-none p-1 mr-1 rounded-full text-center w-9 h-9 text-lg",
-        "hover:bg-[#149ddd] hover:text-white hover:no-underline",
+        "inline-block bg-sidebar-accent text-white leading-none p-1 mr-1 rounded-full text-center w-9 h-9 text-lg",
+        "hover:bg-primary hover:text-white hover:no-underline",
         name,
       )}
     >
@@ -22,11 +25,11 @@ export const Profile = () => {
   );
 
   return (
-    <div className="profile">
+    <div className="flex flex-col items-center px-4 py-6">
       <img
-        src={ProfileImg}
+        src="/assets/img/profile.jpg"
         alt="Denis Mikhalev"
-        className="my-4 mx-auto block w-[120px] border-8 border-[#2c2f3f]"
+        className="my-4 mx-auto block w-[120px] border-8 border-sidebar-border"
       />
       <h1 className="text-2xl m-0 p-0 font-semibold text-center">
         <Link
@@ -36,7 +39,7 @@ export const Profile = () => {
           Denis Mikhalev
         </Link>
       </h1>
-      <div className="text-center">{social.map(renderLinks)}</div>
+      <div className="mt-3 text-center">{links.map(renderLinks)}</div>
     </div>
   );
 };

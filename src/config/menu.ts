@@ -1,4 +1,10 @@
-export const menu = [
+export interface MenuItem {
+  section: string;
+  className: string;
+  spanText: string;
+}
+
+export const menu: MenuItem[] = [
   {
     section: "hero",
     className: "bx bx-home",
