@@ -4,3 +4,4 @@ export * from "./projects";
 export * from "./education";
 export * from "./profile";
 export * from "./experience";
+export * from "./personal";

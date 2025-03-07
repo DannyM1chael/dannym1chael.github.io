@@ -97,13 +97,8 @@ export const Portfolio = () => {
               isAnimating ? "opacity-0" : "opacity-100",
             )}
           >
-            {filteredData.map((project) => (
-              <Project
-                key={project.name}
-                name={project.name}
-                page={project.page}
-                img={project.img}
-              />
+            {filteredData.map(({ name, page, img }) => (
+              <Project key={name} name={name} page={page} img={img} />
             ))}
           </div>
         </div>

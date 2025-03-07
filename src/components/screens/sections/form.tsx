@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Aos from "aos";
 import axios from "axios";
 import { z } from "zod";
+import { cn } from "@/lib";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Your name is too short" }),
@@ -13,6 +14,8 @@ const schema = z.object({
 });
 
 type FormData = z.infer<typeof schema>;
+
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 
 export const Form = () => {
   const [status, setStatus] = useState<string>("");
@@ -28,7 +31,7 @@ export const Form = () => {
   const onSubmit = async (data: FormData) => {
     setStatus("Progress");
     try {
-      await axios.post("https://formspree.io/xrgyjlyy", data);
+      await axios.post(FORMSPREE_URL, data);
       setStatus("Success");
       reset();
     } catch (error) {
@@ -51,7 +54,7 @@ export const Form = () => {
       data-aos-delay="100"
     >
       <form
-        className="w-full p-8 bg-white shadow-lg"
+        className="w-full p-8 shadow-2xl rounded"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-wrap -mx-2">
@@ -62,7 +65,12 @@ export const Form = () => {
             <input
               type="text"
               id="name"
-              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+              className={cn(
+                "w-full rounded-none shadow-none text-sm h-11 p-2 border outline-none",
+                errors.name
+                  ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                  : "border-gray-300 focus:border-primary focus:ring-primary",
+              )}
               {...register("name")}
             />
             {errors.name && (
@@ -78,7 +86,12 @@ export const Form = () => {
             <input
               type="email"
               id="email"
-              className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+              className={cn(
+                "w-full rounded-none shadow-none text-sm h-11 p-2 border outline-none",
+                errors.email
+                  ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                  : "border-gray-300 focus:border-primary focus:ring-primary",
+              )}
               {...register("email")}
             />
             {errors.email && (
@@ -95,7 +108,12 @@ export const Form = () => {
           <input
             type="text"
             id="subject"
-            className="w-full rounded-none shadow-none text-sm h-11 p-2 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+            className={cn(
+              "w-full rounded-none shadow-none text-sm h-11 p-2 border outline-none",
+              errors.subject
+                ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                : "border-gray-300 focus:border-primary focus:ring-primary",
+            )}
             {...register("subject")}
           />
           {errors.subject && (
@@ -110,7 +128,12 @@ export const Form = () => {
           </label>
           <textarea
             id="message"
-            className="w-full rounded-none shadow-none text-sm p-3 border border-gray-300 focus:border-primary focus:ring-primary outline-none"
+            className={cn(
+              "w-full rounded-none shadow-none text-sm p-3 border outline-none",
+              errors.message
+                ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                : "border-gray-300 focus:border-primary focus:ring-primary",
+            )}
             rows={10}
             {...register("message")}
           ></textarea>

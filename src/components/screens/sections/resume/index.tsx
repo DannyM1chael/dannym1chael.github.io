@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Aos from "aos";
-import { Summary } from "./summary";
 import { Education } from "./education";
 import { Experience } from "./experience";
 
@@ -17,10 +16,16 @@ export const Resume = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">Resume</h2>
+          <p>
+            <em>
+              Innovative and deadline-driven Web Developer with passion of
+              developing web products from initial concept to final, polished
+              deliverable.
+            </em>
+          </p>
         </div>
         <div className="flex flex-wrap">
           <div className="w-full lg:w-1/2 px-4" data-aos="fade-up">
-            <Summary />
             <Education />
           </div>
           <div

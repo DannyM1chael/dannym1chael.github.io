@@ -25,7 +25,7 @@ export const ScrollButton = () => {
       to="#"
       onClick={scrollHandler}
       className={cn(
-        "fixed w-10 h-10 rounded-full right-4 bottom-4 bg-blue-500 text-white z-50 hover:bg-blue-400",
+        "fixed w-10 h-10 rounded-full right-4 bottom-4 bg-primary text-white z-50 hover:bg-primary-dark",
         isScroll ? "block" : "hidden",
       )}
     >

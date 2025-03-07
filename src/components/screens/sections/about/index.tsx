@@ -2,9 +2,19 @@ import { Fragment, useEffect } from "react";
 import Aos from "aos";
 import { Facts } from "./facts";
 import { Skills } from "./skills";
-import { facts, skills } from "@/api";
+import { facts } from "@/api/facts";
+import { skills } from "@/api/skills";
+import { personalInfo, contactInfo, PersonalInfoItem } from "@/api";
 
-export const About = () => {
+interface AboutProps {
+  personalInfo?: PersonalInfoItem[];
+  contactInfo?: PersonalInfoItem[];
+}
+
+export const About = ({
+  personalInfo: personalInfoProp = personalInfo,
+  contactInfo: contactInfoProp = contactInfo,
+}: AboutProps) => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -12,9 +22,16 @@ export const About = () => {
     });
   }, []);
 
+  const renderInfoItem = (item: PersonalInfoItem, index: number) => (
+    <li key={index} className="pb-2.5">
+      <i className="icofont-rounded-right text-xl pr-0.5 text-primary" />
+      <strong>{item.label}:</strong> {item.value}
+    </li>
+  );
+
   return (
     <Fragment>
-      <section id="about" className="about">
+      <section id="about" className="py-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">About</h2>
@@ -33,37 +50,18 @@ export const About = () => {
                 alt="Denis Mikhalev"
               />
             </div>
-            <div className="w-full lg:w-2/3 pt-4 lg:pt-0" data-aos="fade-left">
-              <h3 className="font-bold text-2xl text-[#173b6c] mb-4">
+            <div
+              className="w-full px-2 lg:w-2/3 pt-4 lg:pt-0"
+              data-aos="fade-left"
+            >
+              <h3 className="font-bold text-2xl text-body mb-4">
                 Web Developer
               </h3>
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2">
                   <ul className="list-none p-0">
-                    <li className="pb-2.5">
-                      <i className="icofont-rounded-right text-xl pr-0.5 text-[#149ddd]" />{" "}
-                      <strong>Country:</strong> Serbia
-                    </li>
-                    <li className="pb-2.5">
-                      <i className="icofont-rounded-right text-xl pr-0.5 text-[#149ddd]" />{" "}
-                      <strong>Hobbies:</strong> Travelling
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-full lg:w-1/2">
-                  <ul className="list-none p-0">
-                    <li className="pb-2.5">
-                      <i className="icofont-rounded-right text-xl pr-0.5 text-[#149ddd]" />{" "}
-                      <strong>Degree:</strong> BS
-                    </li>
-                    <li className="pb-2.5">
-                      <i className="icofont-rounded-right text-xl pr-0.5 text-[#149ddd]" />{" "}
-                      <strong>Email:</strong> denis.mikhalev.pro@gmail.com
-                    </li>
-                    <li className="pb-2.5">
-                      <i className="icofont-rounded-right text-xl pr-0.5 text-[#149ddd]" />{" "}
-                      <strong>Telegram:</strong> @DannyM1chael
-                    </li>
+                    {personalInfoProp.map(renderInfoItem)}
+                    {contactInfoProp.map(renderInfoItem)}
                   </ul>
                 </div>
               </div>
