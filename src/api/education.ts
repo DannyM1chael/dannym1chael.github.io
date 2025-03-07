@@ -9,7 +9,7 @@ export interface EducationItem {
 export const educationItems: EducationItem[] = [
   {
     title: "Bachelor of Computer Science",
-    period: "2019 - 2023",
+    period: "2019 - 2024",
     institution: "Moscow Witte University",
     details: [
       "Faculty – Information technology",

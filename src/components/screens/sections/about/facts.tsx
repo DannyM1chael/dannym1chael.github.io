@@ -27,14 +27,12 @@ export const Facts = ({ facts }: FactsProps) => {
               "block text-4xl text-primary float-left",
             )}
           />
-          <CountUp start={0} end={item.spanText} duration={10}>
+          <CountUp start={0} end={item.spanText} duration={10} enableScrollSpy>
             {({ countUpRef }) => (
               <span
                 ref={countUpRef}
                 className="text-5xl leading-10 block font-bold text-heading ml-16"
-              >
-                {item.spanText}
-              </span>
+              />
             )}
           </CountUp>
           <p className="pt-4 mb-0 ml-16 font-['Raleway',sans-serif] text-sm text-body">
