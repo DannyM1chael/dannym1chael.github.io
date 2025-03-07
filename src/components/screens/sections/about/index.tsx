@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import Aos from "aos";
 import { Facts } from "./facts";
 import { Skills } from "./skills";

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://DannyM1chael.github.io/Portfolio-app",
+  "homepage": "https://dannyM1chael.github.io",
   "name": "personal-app",
   "version": "0.2.0",
   "private": true,
@@ -7,7 +7,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "dev": "vite",
-    "lint": "eslint . --ext ts,tsx",
+    "lint": "eslint src --ext ts,tsx",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d build"

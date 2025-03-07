@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 import { menu, MenuItem } from "@/config";
 import { cn } from "@/lib";

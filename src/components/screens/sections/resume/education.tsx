@@ -1,4 +1,3 @@
-import React from "react";
 import { EducationItem, educationItems } from "@/api";
 
 interface EducationProps {

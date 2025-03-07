@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface ProjectProps {
   name: string;
   page: string;

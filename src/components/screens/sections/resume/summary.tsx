@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Summary = () => (
   <>
     <h3 className="text-2xl font-bold mt-5 mb-5 text-heading">Summary</h3>

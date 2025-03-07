@@ -1,4 +1,3 @@
-import React from "react";
 import { ExperienceItem, experienceItems } from "@/api";
 
 interface ExperienceProps {

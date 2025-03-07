@@ -1,4 +1,3 @@
-import React from "react";
 import { About } from "@/components/screens/sections/about";
 import { Resume } from "@/components/screens/sections/resume";
 import { Portfolio } from "@/components/screens/sections/portfolio";

@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/Portfolio-app/",
+  base: "/",
   build: {
     outDir: "build",
     rollupOptions: {

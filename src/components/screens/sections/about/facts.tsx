@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import CountUp from "react-countup";
 import { cn } from "@/lib";
