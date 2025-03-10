@@ -12,7 +12,6 @@ export default defineConfig({
         format: "es",
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            if (id.includes("tech-stack-icons")) return "icons";
             return "vendor";
           }
         },
