@@ -12,20 +12,6 @@ export default defineConfig({
         format: "es",
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            if (
-              id.includes("react-router-dom") ||
-              id.includes("react-router")
-            ) {
-              return "router";
-            }
-            if (
-              id.includes("react-transition-group") ||
-              id.includes("react-scroll")
-            ) {
-              return "animations";
-            }
-            if (id.includes("tailwind")) return "tailwind";
-            if (id.includes("zod")) return "validation";
             if (id.includes("tech-stack-icons")) return "icons";
             return "vendor";
           }
