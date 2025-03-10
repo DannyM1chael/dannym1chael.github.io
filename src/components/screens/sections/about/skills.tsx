@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Aos from "aos";
-import StackIcon from "tech-stack-icons";
 import { SkillCategory } from "@/api";
+
+const StackIcon = lazy(() => import("tech-stack-icons"));
 
 interface SkillsProps {
   skills: SkillCategory[];
@@ -28,7 +29,13 @@ export const Skills = ({ skills }: SkillsProps) => {
                   className="flex flex-col items-center justify-center p-4 bg-white shadow rounded-lg"
                   data-aos="fade-up"
                 >
-                  <StackIcon name={icon} className="w-12 h-12" />
+                  <Suspense
+                    fallback={
+                      <div className="w-12 h-12 bg-gray-200 rounded animate-pulse" />
+                    }
+                  >
+                    <StackIcon name={icon} className="w-12 h-12" />
+                  </Suspense>
                   <span className="mt-2 text-sm font-semibold text-gray-700">
                     {skill}
                   </span>

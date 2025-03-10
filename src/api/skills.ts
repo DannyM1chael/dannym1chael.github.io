@@ -75,6 +75,10 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
+    category: "Testing",
+    skills: [{ skill: "Jest", icon: "jest" }],
+  },
+  {
     category: "Version Control",
     skills: [
       { skill: "Git", icon: "git" },
