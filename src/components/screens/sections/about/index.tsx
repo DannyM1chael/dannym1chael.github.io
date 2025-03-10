@@ -36,10 +36,13 @@ export const About = ({
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">About</h2>
             <p className="text-base">
-              I&#39;m a Web developer with a passion for building meaningful
-              products. I believe IT is the future, but technologies won&#39;t
-              replace people at the end, they have to go forward together side
-              by side.
+              Tech Lead and Senior Software Developer with 5+ years of
+              experience building high-performance, scalable web applications.
+              Proven leadership in designing and executing large-scale projects
+              with complex system architecture, focusing on real-time data
+              processing, performance optimization, and user-centric design.
+              Adept at managing cross-functional teams and driving impactful
+              results through technical innovation.
             </p>
           </div>
           <div className="flex flex-wrap">

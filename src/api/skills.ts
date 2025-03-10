@@ -1,59 +1,85 @@
 export interface SkillItem {
   skill: string;
-  value: number;
+  icon: string;
 }
 
-export const skills: SkillItem[] = [
+export interface SkillCategory {
+  category: string;
+  skills: SkillItem[];
+}
+
+export const skills: SkillCategory[] = [
   {
-    skill: "HTML",
-    value: 90,
+    category: "Programming Languages",
+    skills: [
+      { skill: "JavaScript", icon: "js" },
+      { skill: "TypeScript", icon: "typescript" },
+      { skill: "Go", icon: "go" },
+    ],
   },
   {
-    skill: "CSS",
-    value: 90,
+    category: "Frontend Development",
+    skills: [
+      { skill: "HTML5", icon: "html5" },
+      { skill: "CSS3", icon: "css3" },
+      { skill: "Tailwind CSS", icon: "tailwindcss" },
+      { skill: "React", icon: "reactjs" },
+      { skill: "Vue.js", icon: "vuejs" },
+      { skill: "Next.js", icon: "nextjs" },
+    ],
   },
   {
-    skill: "JavaScript",
-    value: 75,
+    category: "Backend Development",
+    skills: [
+      { skill: "Node.js", icon: "nodejs" },
+      { skill: "Nest.js", icon: "nestjs" },
+    ],
   },
   {
-    skill: "TypeScript",
-    value: 75,
+    category: "State Management",
+    skills: [
+      { skill: "React Query", icon: "reactquery" },
+      { skill: "Redux", icon: "redux" },
+      { skill: "Zod", icon: "zod" },
+    ],
   },
   {
-    skill: "Go",
-    value: 75,
+    category: "Build Tools",
+    skills: [
+      { skill: "Vite", icon: "vitejs" },
+      { skill: "Webpack", icon: "webpack" },
+    ],
   },
   {
-    skill: "React",
-    value: 70,
+    category: "Databases",
+    skills: [
+      { skill: "MySQL", icon: "mysql" },
+      { skill: "PostgreSQL", icon: "postgresql" },
+      { skill: "MongoDB", icon: "mongodb" },
+    ],
   },
   {
-    skill: "Redux",
-    value: 90,
+    category: "Cloud Platforms",
+    skills: [
+      { skill: "AWS", icon: "aws" },
+      { skill: "Azure", icon: "azure" },
+      { skill: "Google Cloud Platform (GCP)", icon: "gcloud" },
+    ],
   },
   {
-    skill: "Next.js",
-    value: 70,
+    category: "DevOps & CI/CD",
+    skills: [
+      { skill: "Kubernetes", icon: "kubernetes" },
+      { skill: "Docker", icon: "docker" },
+      { skill: "GitLab CI", icon: "gitlab" },
+    ],
   },
   {
-    skill: "Node.js",
-    value: 50,
-  },
-  {
-    skill: "Vue",
-    value: 70,
-  },
-  {
-    skill: "MySQL",
-    value: 30,
-  },
-  {
-    skill: "Docker",
-    value: 50,
-  },
-  {
-    skill: "Git",
-    value: 50,
+    category: "Version Control",
+    skills: [
+      { skill: "Git", icon: "git" },
+      { skill: "GitLab", icon: "gitlab" },
+      { skill: "GitHub", icon: "github" },
+    ],
   },
 ];

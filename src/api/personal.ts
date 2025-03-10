@@ -9,7 +9,7 @@ export const personalInfo: PersonalInfoItem[] = [
 ];
 
 export const contactInfo: PersonalInfoItem[] = [
-  { label: "Degree", value: "Bachelor of Computer Science" },
+  { label: "Degree", value: "BCS" },
   { label: "Email", value: "denis.mikhalev.pro@gmail.com" },
   { label: "Telegram", value: "@DannyM1chael" },
 ];

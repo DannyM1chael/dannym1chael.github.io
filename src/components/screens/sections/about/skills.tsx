@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import Aos from "aos";
-import { SkillItem } from "@/api";
+import StackIcon from "tech-stack-icons";
+import { SkillCategory } from "@/api";
 
 interface SkillsProps {
-  skills: SkillItem[];
+  skills: SkillCategory[];
 }
 
 export const Skills = ({ skills }: SkillsProps) => {
@@ -11,41 +12,31 @@ export const Skills = ({ skills }: SkillsProps) => {
     Aos.init({});
   }, []);
 
-  const renderSkills = (item: SkillItem, index: number) => {
-    return (
-      <div className="block h-[50px] mb-6" key={index}>
-        <span className="p-0 mb-1.5 uppercase block font-semibold font-['Poppins',sans-serif] text-heading">
-          {item.skill}{" "}
-          <i className="float-right font-normal">{`${item.value}%`}</i>
-        </span>
-        <div className="bg-secondary w-full">
-          <div
-            className="h-2.5 transition-all duration-900 ease-in-out delay-900 bg-primary"
-            style={{ width: `${item.value}%` }}
-          />
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section id="skills" className="bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4">Skills</h2>
+          <h2 className="text-3xl font-bold">Skills</h2>
         </div>
-        <div className="flex flex-wrap">
-          <div className="w-full lg:w-1/2 px-4" data-aos="fade-up">
-            {skills.slice(0, skills.length / 2).map(renderSkills)}
+        {skills.map(({ category, skills }, index) => (
+          <div key={index} className="mb-2">
+            <h3 className="font-semibold mb-2">{category}</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {skills.map(({ skill, icon }, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center justify-center p-4 bg-white shadow rounded-lg"
+                  data-aos="fade-up"
+                >
+                  <StackIcon name={icon} className="w-12 h-12" />
+                  <span className="mt-2 text-sm font-semibold text-gray-700">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div
-            className="w-full lg:w-1/2 px-4"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            {skills.slice(skills.length / 2).map(renderSkills)}
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

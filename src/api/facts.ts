@@ -7,7 +7,7 @@ export interface FactItem {
 export const facts: FactItem[] = [
   {
     className: "icofont-brainstorming",
-    spanText: 14,
+    spanText: 26,
     strongText: "New Technologies",
   },
   {
