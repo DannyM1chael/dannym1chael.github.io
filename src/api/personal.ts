@@ -11,5 +11,5 @@ export const personalInfo: PersonalInfoItem[] = [
 export const contactInfo: PersonalInfoItem[] = [
   { label: "Degree", value: "BCS" },
   { label: "Email", value: "denis.mikhalev.pro@gmail.com" },
-  { label: "Telegram", value: "@DannyM1chael" },
+  { label: "Telegram", value: "@dannyM1chael" },
 ];
