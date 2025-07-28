@@ -1,15 +1,15 @@
 export interface PersonalInfoItem {
-  label: string;
-  value: string;
+	label: string;
+	value: string;
 }
 
 export const personalInfo: PersonalInfoItem[] = [
-  { label: "Country", value: "Serbia" },
-  { label: "Hobbies", value: "Travelling" },
+	{ label: "Country", value: "Serbia" },
+	{ label: "Hobbies", value: "Travelling" },
 ];
 
 export const contactInfo: PersonalInfoItem[] = [
-  { label: "Degree", value: "BCS" },
-  { label: "Email", value: "denis.mikhalev.pro@gmail.com" },
-  { label: "Telegram", value: "@dannyM1chael" },
+	{ label: "Degree", value: "Bachelor of Computer Science" },
+	{ label: "Email", value: "denis.mikhalev.pro@gmail.com" },
+	{ label: "Telegram", value: "@dannyM1chael" },
 ];
