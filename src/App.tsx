@@ -3,12 +3,12 @@ import { Header, Home, ScrollButton, Sections } from "@/components";
 import "./global.css";
 
 const App = () => (
-  <BrowserRouter>
-    <Header />
-    <Home />
-    <Sections />
-    <ScrollButton />
-  </BrowserRouter>
+	<BrowserRouter>
+		<Header />
+		<Home />
+		<Sections />
+		<ScrollButton />
+	</BrowserRouter>
 );
 
 export default App;
